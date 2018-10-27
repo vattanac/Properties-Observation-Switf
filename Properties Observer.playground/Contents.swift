@@ -29,10 +29,36 @@ var totalStep:Int = 20 {
     didSet(oldTotalStep){
         if totalStep > oldTotalStep {
             print("Added \(totalStep - oldTotalStep)")
+        }else{
+            print("Logic Error")
         }
     }
 }
 
 totalStep = 120
+totalStep = 70
 
+
+//EXAMPLE 3:
+print("=== EXAMPLE3 ===")
+var isUserLoggedIN = false {
+   
+    willSet(newValue){
+        print("The user try something")
+    }
+    didSet{
+        if isUserLoggedIN {
+            print("user has switch from \(oldValue) to \(isUserLoggedIN)")
+        }else{
+            print(isUserLoggedIN)
+        }
+    }
+        
+}
+
+isUserLoggedIN = true
+
+isUserLoggedIN = false
+
+isUserLoggedIN = true
 
