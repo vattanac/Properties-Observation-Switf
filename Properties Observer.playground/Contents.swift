@@ -56,6 +56,8 @@ var isUserLoggedIN = false {
         
 }
 
+//if we not set value below the ablove code(willSet , didSet) nerver work
+//it work when we initialize it
 isUserLoggedIN = true
 
 isUserLoggedIN = false
